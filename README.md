@@ -1,37 +1,152 @@
-## Welcome to GitHub Pages
+# What's `jekyll-minimal-theme`?
 
-You can use the [editor on GitHub](https://github.com/Kalightortaio/blog.kalightortaio.com/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+It's another minimal(istic) Jekyll static site generator theme,
+that is, a ready-to-fork template pack.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+See a live demo @ [`henrythemes.github.io/jekyll-minimal-theme` »](http://henrythemes.github.io/jekyll-minimal-theme)
 
-### Markdown
+For example:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+├── _config.yml                               # site configuration
+├── _posts                                    # sample blog posts
+|   ├── 2014-05-05-sportdb-update-v192.md     #   filename format:
+|   ├── 2014-10-10-new-repo-baviria-bayern.md #    => YEAR-MONTH-DAY-TITLE.MARKUP
+|   ├── 2014-10-21-sql-views.md
+|   ├── 2014-11-11-new-reop-maps.md
+|   └── 2014-12-15-quick-starter-datafiles.md
+├── _layouts                           
+|   ├── default.html                   # master layout template
+|   └── post.html                      # single blog post template
+├── css                               
+|   ├── _settings.scss                 # style settings (e.g. variables)
+|   └── style.scss                     # master style page
+├── feed.xml                           # web feed template (e.g. in atom format)
+├── archive.html                       # archive template
+└── index.html                         # index template
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+will result in (with `permalink: /:title.html`):
 
-### Jekyll Themes
+```
+└── _site                                # output build folder; site gets generated here
+    ├── css
+    |   └── style.css                    # styles for pages (copied 1:1 as is)
+    ├── sportdb-update-v192.html         # blog post page
+    ├── new-repo-baviria-bayern.html     # another blog post page
+    ├── sql-views.html                   #  ""
+    ├── new-repo-maps.html               #  ""
+    ├── quick-starter-datafiles.html     #  ""
+    ├── feed.xml                         # web feed (e.g. in atom format)
+    ├── archive.html                     # archive page
+    └── index.html                       # index page
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Kalightortaio/blog.kalightortaio.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## Usage
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+To use - delete all sample posts in the `_posts` folder and
+change the settings in `_config.yml` to use your own `site.title`
+and `site.url`:
+
+```
+title:   'Jekyll Minimal Theme'
+url:     'http://henrythemes.github.io/jekyll-minimal-theme'
+author:
+  name:  'Jekyll Minimal Theme Team'
+```
+
+
+## Color n Typography Settings (in `css/_settings.scss`)
+
+Typography (Fonts):
+
+~~~
+$font-family:       "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$code-font-family:  Menlo, Monaco, "Courier New", monospace;
+~~~
+
+Colors:
+
+~~~
+$masthead-color:         #505050;
+$masthead-small-color:   #C0C0C0;
+
+$post-title-color:       #303030;
+$post-date-color:        #9a9a9a;
+
+
+$body-color:            #515151;
+$body-background-color: #fff;
+
+$link-color:            #268bd2;
+
+$headings-color:        #313131;    // h1,h2,h3,h4,h5,h6
+
+$strong-color:          #303030;    // strong
+
+$pre-background-color:  #f9f9f9;    // pre
+
+$blockquote-color:        #7a7a7a;  // blockquote
+$blockquote-border-color: #e5e5e5;
+
+$table-border-color:         #e5e5e5;
+$table-odd-background-color: #f9f9f9;
+~~~
+
+A big thanks to the Poole theme; the `jekyll-minimal-theme` started out w/
+the typography and color settings from the Poole theme.
+
+
+## Alternative (Minimal) Jekyll Themes
+
+- Poole Theme by Mark Otto - [(Source)](https://github.com/poole/poole)
+
+- Pixyll Theme by John Otander - [(Source)](https://github.com/johnotander/pixyll)
+
+~~~
+in _main.scss:
+  font-family:     "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  code-font-family: Menlo, Monaco, "Courier New", monospace;
+  h1-h6|button|form|pagination|footer -font-family:
+                   'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+
+in _basscss.scss:
+  font-family:       'Helvetica Neue', Helvetica, sans-serif;
+~~~
+
+- Hikari Theme by Mathieu Mayer-Mazzoli - [(Source)](https://github.com/m3xm/hikari-for-Jekyll)
+
+~~~
+in components/_syntax.scss:
+  code-font-family:    'Courier', monospace;
+in base/_variables.scss:
+  font-family:         'Open Sans', sans-serif;
+  variant-font-family: 'Lora', Georgia, serif;
+in base/_global.scss:
+  h1-h6-font-family:  'Open Sans', sans-serif;
+in base/_reset.scss:
+  font-family:         sans-serif;
+  code-font-family:    monospace, monospace;
+~~~
+
+
+### More Themes
+
+See the [Dr. Jekyll's Themes](https://drjekyllthemes.github.io) directory.
+
+### More Quick Starter Wizard Scripts
+
+See the [Mr. Hyde's Scripts](https://github.com/mrhydescripts/scripts) library.
+
+
+## License
+
+![](https://publicdomainworks.github.io/buttons/zero88x31.png)
+The theme and scripts are dedicated to the public domain. Use it as you please with no restrictions whatsoever.
+
+## Questions? Comments?
+
+Send them along to the [wwwmake forum](http://groups.google.com/group/wwwmake).
+Thanks!
