@@ -263,7 +263,7 @@ table {
   color: $post-date-color;  
 }
 
-@media max-width(700px) {
+@media (max-width: 700px) {
     .masthead .logo, .masthead .logo-name {
         display: none;   
     }
