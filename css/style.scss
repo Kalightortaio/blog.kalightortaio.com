@@ -7,7 +7,12 @@
 
 @import 'settings';
 
-@import url(https://portfolio.kalightortaio.com/static/media/Agustina.eb0c59dd.woff);
+@font-face {
+    font-family: "Agustina Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Agustina Regular"), url("../assets/fonts/Agustina.woff") format("woff");
+}
 
 html {
   font-family: $font-family;
@@ -191,6 +196,8 @@ table {
  .masthead-title {
     margin-top: 0;
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
     color: $masthead-color;
   
     a {
@@ -199,11 +206,10 @@ table {
     
     small {
       color: $masthead-small-color;
-      font-size: 75%;
+      font-size: 100%;
       font-weight: 400;
       letter-spacing: 0;
-      padding-left: 1vw;
-      paddint-right: 1vw;
+      padding-left: 1.4vw;
      }
   }
 }
