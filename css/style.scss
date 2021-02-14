@@ -209,23 +209,27 @@ table {
       font-size: 100%;
       font-weight: 400;
       letter-spacing: 0;
-     }
+    }
+     
+    .logo-name {
+      font-family: "Agustina Regular";
+      font-weight: bold;
+      padding: 0 10px; 
+    }
+     
+    .logo {
+      display: block;
+      float: left;
+      text-decoration: none;
+      margin-top: 10px;
+      line-height: normal;
+      padding-right: 50px;
+    }
+     
+    .menu {
+      text-align: center;    
+    }
   }
-}
-
-.masthead-title .logo-name {
-   font-family: "Agustina Regular";
-   font-weight: bold;
-   padding: 0 10px;
-}
-
-.masthead-title .logo {
-  display: block;
-  float: left;
-  text-decoration: none;
-  margin-top: 10px;
-  line-height: normal;
-  padding-right: 50px;
 }
 
 //////////////////////////
