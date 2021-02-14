@@ -220,11 +220,8 @@ table {
     }
      
     .menu {
-        text-align:justify;
-        color: $masthead-small-color;
-        font-size: 100%;
-        font-weight: 400;
-        letter-spacing: 0;
+        text-align: justify;
+        width: 15em;
      }
      
     .menu:after { 
@@ -235,6 +232,10 @@ table {
      
     .menu > span {
         display:inline-block
+        color: $masthead-small-color;
+        font-size: 100%;
+        font-weight: 400;
+        letter-spacing: 0;
      } 
   }
 }
