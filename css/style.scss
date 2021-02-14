@@ -219,15 +219,9 @@ table {
       padding-right: 50px;
     }
      
-    .menu {
-        text-align: justify;
-        width: 15em;
-     }
-     
-    .menu:after { 
-        content: ' '; 
-        display: inline-block; 
-        width: 100%; height: 0 
+    .menu { 
+        display: flex; 
+        justify-content: space-between; 
      }
      
     .menu > span {
