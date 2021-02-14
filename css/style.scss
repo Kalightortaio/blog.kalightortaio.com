@@ -219,11 +219,13 @@ table {
     }
      
     .menu { 
+        width: 100%;
+        align-items: center;
         display: flex; 
         justify-content: space-between; 
      }
      
-    .menu > span {
+    .menu-items {
         display:inline-block;
         color: $masthead-small-color;
         font-size: 100%;
@@ -259,4 +261,10 @@ table {
 
 .post-date {
   color: $post-date-color;  
+}
+
+@media max-width(700px) {
+    .masthead .logo, .masthead .logo-name {
+        display: none;   
+    }
 }
